@@ -1,0 +1,5 @@
+To run the hql files, start the beeline terminal and run the following command:
+source <name_of_file>.hql
+
+To run the pig files, run the following command:
+./<name_of_file>.pig
