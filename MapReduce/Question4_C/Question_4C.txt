@@ -1,0 +1,8 @@
+Instructions to run:
+
+Usage: CoOccurrenceStripes <input> <output> <frequentWordsFile> [windowDistance]
+
+javac -source 1.8 -target 1.8 -cp $(hadoop classpath) CoOccurrenceStripes.java
+jar -cvf CoOccurrenceStripes.jar CoOccurrenceStripes*.class
+
+hadoop jar CoOccurrenceStripes.jar CoOccurrenceStripes /user/hadoop/Wikipedia-EN-20120601_ARTICLES /user/hadoop/output_stripes /user/hadoop/top_freq_4a <d>

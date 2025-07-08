@@ -1,0 +1,14 @@
+To compile and execute:
+
+Javac -classpath <classpath> -d <output_directory> <javafile>.java
+Jar -cvf <jar_file_name> -C <class files directory> .
+
+To run the jar file:
+
+time hadoop jar PairsAggregation.jar PairsAggregation /B_input "/4d_output_pairs/" /4d_input/top_freq_4a $dist $agg
+time hadoop jar StripesAggregation.jar StripesAggregation /B_input "/4d_output_stripes/" /4d_input/top_freq_4a $dist $agg
+
+
+To execute for all values of dist and agg, this was done using an executable shell command file for pairs and stripes, attached in the submission.
+
+Screenshots of the output are named as {dist}_{agg}.png

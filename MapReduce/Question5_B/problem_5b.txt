@@ -1,0 +1,26 @@
+Follow these instructions to run code for Problem 5B. The compilation was done using Maven on the IntelliJ IDE. Relevant files for compilation (specifically, pom.xml and the output of 5A which was used as output for this, named "part-r-00000-sorted") have been included in the submission.
+
+Recreate project hierarchy:
+
+Problem_5B
+   src
+      main
+         java
+            org
+               nosql
+                  TFIDF.java (included in submission)
+                  openllp-tools-1.9.3.jar
+    
+   pom.xml (included in submission)
+
+
+run "maven clean install", and the .jar is created in a new "target" folder, in the project directory. Although 2 jars are created, one must run "TFIDF-1.0-SNAPSHOT.jar".
+
+To first upload the necessary files:
+
+hdfs dfs -put part-r-00000-sorted /
+
+
+It is to be run on the hadoop file system as follows:
+
+hadoop jar TFIDF-1.0-SNAPSHOT.jar /input_dir /output_dir hdfs://localhost:9000/part-r-00000-sorted

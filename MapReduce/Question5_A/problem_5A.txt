@@ -1,0 +1,29 @@
+Follow these instructions to run code for Problem 5A. The compilation was done using Maven on the IntelliJ IDE. Relevant files for compilation (specifically, pom.xml) has been included in the submission.
+
+Recreate project hierarchy:
+
+Problem_5A
+   src
+      main
+         java
+            org
+               nosql
+                  Main.java (included in submission)
+                  openllp-tools-1.9.3.jar
+         resources
+            org
+               nosql
+                  stopwords.txt
+    
+   pom.xml (included in submission)
+
+
+run "maven clean install", and the .jar is created in a new "target" folder, in the project directory. Although 2 jars are created, one must run "NoSQL_assn2_B-1.0-SNAPSHOT.jar".
+
+
+It is to be run on the hadoop file system as follows:
+
+hadoop jar NoSQL_assn2_B-1.0-SNAPSHOT.jar org.nosql.Main /input_dir /output_dir
+
+
+To sort the output and retain the first 100 records, run "retain.py"
